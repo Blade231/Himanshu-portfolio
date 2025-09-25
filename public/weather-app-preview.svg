@@ -1,0 +1,31 @@
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="240" fill="#1f2937"/>
+  <rect x="10" y="10" width="380" height="220" rx="12" fill="#374151"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="360" height="30" rx="6" fill="#4b5563"/>
+  <rect x="30" y="27" width="100" height="16" rx="8" fill="#6b7280"/>
+  
+  <!-- Weather Card -->
+  <rect x="50" y="70" width="300" height="100" rx="10" fill="#6b7280"/>
+  
+  <!-- Sun icon -->
+  <circle cx="100" cy="110" r="16" fill="#fbbf24"/>
+  <rect x="92" y="94" width="3" height="8" rx="1" fill="#fbbf24"/>
+  <rect x="92" y="118" width="3" height="8" rx="1" fill="#fbbf24"/>
+  <rect x="108" y="94" width="3" height="8" rx="1" fill="#fbbf24"/>
+  <rect x="108" y="118" width="3" height="8" rx="1" fill="#fbbf24"/>
+  
+  <!-- Temperature -->
+  <text x="180" y="105" fill="#d1d5db" font-family="Arial" font-size="20" font-weight="bold">25°C</text>
+  <text x="180" y="120" fill="#9ca3af" font-family="Arial" font-size="12">Sunny</text>
+  <text x="180" y="135" fill="#9ca3af" font-family="Arial" font-size="10">New Delhi</text>
+  
+  <!-- Weather details -->
+  <rect x="70" y="190" width="50" height="25" rx="4" fill="#6b7280"/>
+  <rect x="140" y="190" width="50" height="25" rx="4" fill="#6b7280"/>
+  <rect x="210" y="190" width="50" height="25" rx="4" fill="#6b7280"/>
+  <rect x="280" y="190" width="50" height="25" rx="4" fill="#6b7280"/>
+  
+  <text x="200" y="125" text-anchor="middle" fill="#9ca3af" font-family="Arial" font-size="10">Weather App</text>
+</svg>

@@ -77,26 +77,61 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl opacity-70 blur-xl"></div>
-              <div className="relative bg-dark-700 rounded-2xl p-1">
-                <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-xl p-6">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="text-sm text-gray-400">himanshu@portfolio: ~</div>
+            <div className="relative w-full max-w-sm mx-auto lg:max-w-md">
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg opacity-75 blur"></div>
+              
+              {/* Terminal window */}
+              <div className="relative bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
+                {/* Terminal header */}
+                <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
+                  <div className="flex space-x-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="font-mono text-sm text-gray-300 space-y-2">
-                    <p><span className="text-primary-400">$</span> whoami</p>
-                    <p className="ml-4">Himanshu Singh</p>
-                    <p><span className="text-primary-400">$</span> cat about.txt</p>
-                    <p className="ml-4">Full Stack Developer</p>
-                    <p className="ml-4">MERN Stack | Python | DSA</p>
-                    <p className="ml-4">4th Year IT Student</p>
-                    <p><span className="text-primary-400">$</span> <span className="animate-pulse">_</span></p>
+                  <div className="text-sm text-gray-400 font-mono">terminal</div>
+                  <div className="w-12"></div>
+                </div>
+                
+                {/* Terminal content */}
+                <div className="relative p-4 font-mono text-sm text-green-400 bg-black overflow-hidden">
+                  {/* Background pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-primary-700/20"></div>
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `
+                        radial-gradient(circle at 25% 25%, #22d3ee 1px, transparent 1px),
+                        radial-gradient(circle at 75% 75%, #06b6d4 1px, transparent 1px)
+                      `,
+                      backgroundSize: '20px 20px'
+                    }}></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-400/20 to-transparent rounded-full blur-xl"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary-600/20 to-transparent rounded-full blur-lg"></div>
+                  </div>
+                  
+                  {/* Terminal text content */}
+                  <div className="relative z-10 space-y-2">
+                    <div className="flex">
+                      <span className="text-blue-400">user@portfolio:~$</span>
+                      <span className="ml-2 text-white">whoami</span>
+                    </div>
+                    <div className="text-gray-300 ml-4">Himanshu Singh</div>
+                    
+                    <div className="flex mt-3">
+                      <span className="text-blue-400">user@portfolio:~$</span>
+                      <span className="ml-2 text-white">cat about.txt</span>
+                    </div>
+                    <div className="text-gray-300 ml-4 space-y-1">
+                      <div>Full Stack Developer</div>
+                      <div>MERN Stack | Python | DSA</div>
+                      <div>4th Year IT Student</div>
+                    </div>
+                    
+                    <div className="flex mt-3">
+                      <span className="text-blue-400">user@portfolio:~$</span>
+                      <span className="ml-2 animate-pulse">_</span>
+                    </div>
                   </div>
                 </div>
               </div>

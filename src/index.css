@@ -1,8 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-dark-50: #e8e8e8;
+  --color-dark-100: #d1d1d1;
+  --color-dark-200: #bababa;
+  --color-dark-300: #a3a3a3;
+  --color-dark-400: #8c8c8c;
+  --color-dark-500: #757575;
+  --color-dark-600: #5e5e5e;
+  --color-dark-700: #474747;
+  --color-dark-800: #303030;
+  --color-dark-900: #191919;
+  --color-dark-950: #0a0a0a;
+  
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fd;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+  --color-primary-950: #083344;
+}
 
 @layer base {
   html {
@@ -17,16 +40,8 @@
     @apply font-bold;
   }
 
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
-  }
-
-  h2 {
-    @apply text-3xl sm:text-4xl;
-  }
-
   p {
-    @apply text-base leading-relaxed text-gray-300 mb-4;
+    @apply text-base leading-relaxed text-gray-300;
   }
 
   a {
@@ -36,11 +51,13 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply inline-block px-6 py-3 rounded-lg font-semibold tracking-wide shadow-lg transition-all duration-300 ease-in-out;
   }
-
   .btn-primary {
-    @apply bg-primary-500 text-white hover:bg-primary-600;
+    @apply bg-primary-500 text-white hover:bg-primary-600 active:scale-95 transform hover:-translate-y-1;
+  }
+  .btn-outline {
+    @apply border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-white active:scale-95 transform hover:-translate-y-1;
   }
 
   .section {
@@ -49,5 +66,47 @@
 
   .container {
     @apply px-4 mx-auto max-w-7xl;
+  }
+}
+
+@layer utilities {
+  /* Grid background pattern */
+  .bg-grid-white\/\[0\.02\] {
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .bg-grid-white\/\[0\.03\] {
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Custom mask utilities */
+  .\[mask-image\:radial-gradient\(ellipse_at_center\,transparent_20\%\,\#0a0a0a\)\] {
+    mask-image: radial-gradient(ellipse at center, transparent 20%, #0a0a0a);
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, #0a0a0a);
+  }
+
+  /* Custom background utilities */
+  .bg-\[radial-gradient\(circle_at_center\,\#1e40af_0\,rgba\(30\,64\,175\,0\)_50\%\)\] {
+    background: radial-gradient(circle at center, #1e40af 0, rgba(30,64,175,0) 50%);
   }
 }

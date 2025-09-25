@@ -4,21 +4,36 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projects = [
   {
     title: 'Fullstack Chat Application',
-    description: 'A real-time chat application with user authentication, online status, and instant messaging capabilities.',
+    description: 'A real-time chat application with user authentication, online status, and instant messaging capabilities built with Socket.io.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT', 'TailwindCSS'],
     github: 'https://github.com/Blade231/fullstack-chat-app',
-    demo: '#', // Add demo link if available
-    image: '/chat-app-preview.jpg' // Add image path if available
+    demo: '#',
+    image: '/chat-app-preview.svg'
   },
   {
     title: 'E-commerce Website',
-    description: 'A sustainable e-commerce platform featuring product listings, search, and shopping cart functionality.',
+    description: 'A sustainable e-commerce platform featuring product listings, search functionality, and shopping cart with responsive design.',
     technologies: ['React', 'TailwindCSS', 'Context API', 'Vercel'],
     github: 'https://github.com/Blade231/Ecommerce',
-    demo: '#', // Add demo link if available
-    image: '/ecommerce-preview.jpg' // Add image path if available
+    demo: '#',
+    image: '/ecommerce-preview.svg'
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A modern, responsive portfolio website showcasing my projects and skills with smooth animations and dark theme.',
+    technologies: ['React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'Vite'],
+    github: 'https://github.com/Blade231/Himanshu-portfolio',
+    demo: '#',
+    image: '/portfolio-preview.svg'
+  },
+  {
+    title: 'Weather App',
+    description: 'A clean weather application that provides current weather conditions and forecasts using OpenWeather API.',
+    technologies: ['JavaScript', 'HTML5', 'CSS3', 'OpenWeather API', 'Responsive Design'],
+    github: 'https://github.com/Blade231/weather-app',
+    demo: '#',
+    image: '/weather-app-preview.svg'
   }
-  // Add more projects as needed
 ];
 
 export default function Projects() {
@@ -49,12 +64,12 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-dark-800 rounded-xl overflow-hidden border border-dark-700 hover:border-primary-500/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="h-48 bg-dark-700 overflow-hidden">
+              <div className="h-56 bg-dark-700 overflow-hidden rounded-t-xl">
                 {project.image ? (
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-dark-700 p-2"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-dark-700 to-dark-800">
